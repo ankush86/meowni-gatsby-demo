@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Bio from './bio';
@@ -36,7 +37,7 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
         </section>
-      </div>
+      </div>    
     )
   }
 }
@@ -51,6 +52,11 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query IndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}

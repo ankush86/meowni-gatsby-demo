@@ -97,6 +97,7 @@ class Bio extends React.Component {
          <Link to="/"><p style={{ fontWeight: 'bold', color: "black" }}>posts</p></Link>
          <Link to="/projects"><p style={{ fontWeight: 'bold', color: "black" }}>codes</p></Link>
          <Link to="talks"><p style={{ fontWeight: 'bold', color: "black" }}>talks</p></Link>
+         <p id='rainButton' title="emoji-rain" style={{ fontSize: '20px' }}>✨</p>
        </div>
      </div>
    )
