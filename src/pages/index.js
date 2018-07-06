@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
+import _ from 'lodash';
 import Link from 'gatsby-link'
 import Bio from './bio';
 import './index.css';
@@ -11,6 +12,7 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     const group = _.groupBy(posts,(e) => new Date(e.node.frontmatter.date).getFullYear());
     const keys = Object.keys(group);
+    const postKeys = _.sortBy(keys).reverse();
     return (
       <div>
         <div className="top-line"></div>
@@ -19,7 +21,7 @@ export default class IndexPage extends React.Component {
             <div className="content" style={{ display: 'flex'}} >
               <Bio />
               <div className="inner-content" style={{ flexDirection: 'row', marginLeft: '30px' ,maxWidth: '600px' }} >
-                {keys.map(key => (
+                {postKeys.map(key => (
                   <div className="content" key={key} >
                     <h3 className="rainbow" >{key}</h3>
                     {group[key].map(({node: post}) => (
