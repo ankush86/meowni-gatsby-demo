@@ -2,37 +2,41 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Bio from './bio';
+import './index.css';
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-
+    const group = _.groupBy(posts,(e) => new Date(e.node.frontmatter.date).getFullYear());
+    const keys = Object.keys(group);
     return (
-      <section className="section">
-        <div className="container">
-          <div className="content" style={{ display: 'flex'}} >
-            <Bio />
-            <div className="inner-content" style={{ flexDirection: 'row', marginLeft: '30px' ,width: '80%' }} >
-              {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  key={post.id}
-                >
-                  <p>
-                    <Link style={{ color: '#000 !important' }} to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                </div>
-              ))}
+      <div>
+        <div className="top-line"></div>
+        <section className="section">
+          <div className="container">
+            <div className="content" style={{ display: 'flex'}} >
+              <Bio />
+              <div className="inner-content" style={{ flexDirection: 'row', marginLeft: '30px' ,maxWidth: '600px' }} >
+                {keys.map(key => (
+                  <div className="content" key={key} >
+                    <h3 className="rainbow" >{key}</h3>
+                    {group[key].map(({node: post}) => (
+                    
+                      <p key={post.id} className="content-listing" >
+                        <Link className="has-text-primary" to={post.fields.slug}>
+                          {post.frontmatter.title}
+                        </Link>
+                        <small className="dateShow" >{post.frontmatter.date}</small>
+                      </p>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     )
   }
 }
