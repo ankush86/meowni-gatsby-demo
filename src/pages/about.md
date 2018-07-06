@@ -24,3 +24,5 @@ Because the internet is a big place, standard disclaimers about these being my v
 Monica works on Polymer, web components, and Chrome, and has probably at least once broken the Internet for you. She is unreasonably excited about emoji, wary of web fonts, and will become your best friend if you bring her cheese. On second thought, she may be a mouse.
 
 If you need a image, I recommend [this one](https://pbs.twimg.com/profile_images/779808817785675776/Hf9AwdFs_400x400.jpg)
+
+i have changed this file via CMS.
