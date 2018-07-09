@@ -13,7 +13,6 @@ export const CodeTemplate = ({
   title,
   date,
 }) => {
-  debugger;
   return (
     <section className="section">
       {helmet || ''}
