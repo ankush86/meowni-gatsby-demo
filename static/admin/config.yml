@@ -41,3 +41,4 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
+      
