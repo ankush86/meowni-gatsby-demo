@@ -8,7 +8,6 @@ import Content, { HTMLContent } from '../components/Content'
 
 class Projects extends React.Component {
   render() {
-    debugger;
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     const group = _.groupBy(posts,(e) => new Date(e.node.frontmatter.date).getFullYear());
