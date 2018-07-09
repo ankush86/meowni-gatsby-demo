@@ -4,92 +4,52 @@ import React from 'react'
 // import 'typeface-montserrat'
 // import 'typeface-merriweather'
 
-import profilePic from './profile-pic.jpeg'
-import { rhythm } from '../utils/typography'
-import Link from 'gatsby-link'
+import Link from 'gatsby-link';
+import profilePic from '../img/profile-pic.jpeg';
+import twitter from '../img/twitter.svg';
+import github from '../img/github.svg';
+import { rhythm } from '../utils/typography';
 
 class Bio extends React.Component {
- render() {
-   return (
-     <div
-       style={{
-         maxWidth: '16.6%',
-         textAlign: 'center'
-       }}
-     >
-       <Link to="/">
-         <img
-           src={profilePic}
-           alt={`Photo of my face`}
-           style={{
-             borderRadius: "50%", 
-             width: "150px",
-             height: "150px",
-             textDecoration: "none",
-             marginBottom: '0px',
-           }}
-         />
-       </Link>
+  render() {
+    return (
+      <div
+        style={{
+          maxWidth: '16.6%',
+          textAlign: 'center'
+        }}
+      >
+      <a href="/" title="Photo of my face" aria-label="Photo of my face">
+        <img
+          src={profilePic}
+          className="avtar"
+          alt={`Photo of my face`}
+          style={{
+            borderRadius: "50%", 
+            width: "150px",
+            height: "150px",
+            marginBottom: '0px',
+          }}
+        />
+       </a>
        <div className='social-media' style={{ textAlign: 'center' }}>
          <a href="https://github.com/notwaldorf" title="Peep at my GitHub">
-           <i 
-             className="fa fa-github"
-             style={{
-               width: "16px",
-               textDecoration: "none",
-               height: "16px",
-               padding: "10px",
-               color: "black",
-             }}>
-           </i>
+         <img
+            src={github}
+            className="social-img"
+          />
          </a>
          <a href="https://github.com/notwaldorf" title="Follow me on twitter">
-           <i 
-             className="fa fa-twitter"
-             style={{
-               width: "16px",
-               textDecoration: "none",
-               height: "16px",
-               color: "black",
-               padding: "10px",
-             }}>
-           </i>
+          <img
+            src={twitter}
+            className="social-img"
+          />
          </a>
-         <a href="https://github.com/notwaldorf" title="Follow me on dribbble">
-           <i 
-             className="fa fa-dribbble"
-             style={{
-               width: "16px",
-               textDecoration: "none",
-               color: "black",
-               height: "16px",
-               padding: "10px",
-             }}>
-           </i>
+         <a href="https://github.com/notwaldorf" title="Follow me on dribbble">🏀
          </a>
-         <a href="https://github.com/notwaldorf" title="Follow my photos on exposure.co">
-           <i 
-             className="fa fa-github"
-             style={{
-               color: "black",
-               textDecoration: "none",
-               width: "16px",
-               padding: "10px",
-               height: "16px",
-             }}>
-           </i>
+         <a href="https://github.com/notwaldorf" title="Follow my photos on exposure.co">📷
          </a>
-         <a href="https://github.com/notwaldorf" title="Atom RSS feed">
-           <i 
-             className="fa fa-rss"
-             style={{
-               color: "black",
-               textDecoration: "none",
-               width: "16px",
-               padding: "10px",
-               height: "16px",
-             }}>
-           </i>
+         <a href="https://github.com/notwaldorf" title="Atom RSS feed">📝
          </a>
        </div>
        <div style={{ padding: '10px' }}>
