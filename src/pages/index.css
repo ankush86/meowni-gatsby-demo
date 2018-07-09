@@ -2,8 +2,6 @@
   display: inline-block;
   background-image: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%);
   background-size: cover;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .content > h3 {
@@ -104,8 +102,6 @@ a:hover {
   display: inline-block;
   background-size: cover;
   background-clip: content-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
 
@@ -146,10 +142,6 @@ a:hover {
   margin-bottom: 1.2em;
   line-height: 25px;
   display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
   font-size: 18px;
 }
 
@@ -163,8 +155,6 @@ a:hover {
   background-image: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%);
   display: inline-block;
   background-size: cover;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
 
