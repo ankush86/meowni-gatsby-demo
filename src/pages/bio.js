@@ -45,11 +45,11 @@ class Bio extends React.Component {
             className="social-img"
           />
          </a>
-         <a href="https://github.com/notwaldorf" title="Follow me on dribbble">🏀
+         <a href="https://github.com/notwaldorf" title="Follow me on dribbble">
          </a>
-         <a href="https://github.com/notwaldorf" title="Follow my photos on exposure.co">📷
+         <a href="https://github.com/notwaldorf" title="Follow my photos on exposure.co">
          </a>
-         <a href="https://github.com/notwaldorf" title="Atom RSS feed">📝
+         <a href="https://github.com/notwaldorf" title="Atom RSS feed">
          </a>
        </div>
        <div style={{ padding: '10px' }}>
