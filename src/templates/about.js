@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 
 class About extends React.Component {
   render() {
-    debugger;
     const data = this.props.data.markdownRemark
     return (
       <section className="section">
@@ -14,7 +13,7 @@ class About extends React.Component {
           <div className="content" style={{ display: 'flex'}} >
             <Bio />
             <div style={{ width: '600px', marginLeft: '30px', fontSize: '18px', fontFamily: 'Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"' }}>
-              <HTMLContent content={data.html} />
+              <HTMLContent  className="about"  content={data.html} />
             </div>
           </div>
         </div>
