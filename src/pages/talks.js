@@ -1,10 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import _ from 'lodash';
 import Bio from '../pages/bio';
-import Content, { HTMLContent } from '../components/Content'
 
 class Talks extends React.Component {
   render() {

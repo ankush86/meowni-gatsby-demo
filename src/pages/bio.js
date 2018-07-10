@@ -8,7 +8,6 @@ import Link from 'gatsby-link';
 import profilePic from '../img/profile-pic.jpeg';
 import twitter from '../img/twitter.svg';
 import github from '../img/github.svg';
-import { rhythm } from '../utils/typography';
 
 class Bio extends React.Component {
   render() {
