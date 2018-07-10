@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Bio from '../pages/bio';
 import Content, { HTMLContent } from '../components/Content'
 
 export const CodeTemplate = ({
@@ -18,7 +17,6 @@ export const CodeTemplate = ({
       {helmet || ''}
       <div className="container content">
         <div className="content" style={{ display: 'flex'}} >
-          <Bio />
           <div className="inner-content" style={{ flexDirection: 'row', marginLeft: '30px' ,maxWidth: '600px' }} >
             <h1>{date}</h1>
             <a href={link}>
@@ -43,15 +41,14 @@ CodeTemplate.propTypes = {
 
 const Code = ({ data }) => {
   const { markdownRemark: post } = data
-
   return (
     <CodeTemplate
-      link={post.frontmatter.link}
+      link={post && post.frontmatter.link}
       contentComponent={HTMLContent}
-      description={post.frontmatter.description}
-      helmet={<Helmet title={`${post.frontmatter.title} | Code`} />}
-      title={post.frontmatter.title}
-      date={post.frontmatter.date}
+      description={post && post.frontmatter.description}
+      helmet={<Helmet title={`${post && post.frontmatter.title} | Code`} />}
+      title={post && post.frontmatter.title}
+      date={post && post.frontmatter.date}
     />
   )
 }
@@ -65,21 +62,14 @@ Code.propTypes = {
 export default Code
 
 export const pageQuery = graphql`
-  query CodeByIDs {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "project" } }}
-    ) {
-        edges {
-          node {
-            id
-            frontmatter {
-              date(formatString: "YYYY")
-              link
-              title
-              description
-          }
-        }
+  query CodeByIDs($id: String!) {
+    markdownRemark(id: { eq : $id }) {
+      id
+      frontmatter {
+        date(formatString: "YYYY")
+        link
+        title
+        description
       }
     }
   }

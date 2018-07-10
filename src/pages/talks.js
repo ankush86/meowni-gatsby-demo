@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import _ from 'lodash';
-import Bio from '../pages/bio';
+//import Bio from '../bio';
 
 class Talks extends React.Component {
   render() {
@@ -15,7 +15,6 @@ class Talks extends React.Component {
       <section className="section">
         <div className="container content">
           <div className="content" style={{ display: 'flex'}} >
-            <Bio />
             <div className="inner-content" style={{ flexDirection: 'row', marginLeft: '30px' ,maxWidth: '600px' }} >
               <h1 className='rainbow' style={{ fontSize: '36px', marginBottom: '40px', fontWeight: '900' }}>Talks</h1>
               {postKeys.map(key => (

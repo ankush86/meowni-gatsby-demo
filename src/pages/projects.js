@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import _ from 'lodash';
-import Bio from '../pages/bio';
+//import Bio from '../bio';
 
 class Projects extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { edges: posts } = data.markdownRemark
     const group = _.groupBy(posts,(e) => new Date(e.node.frontmatter.date).getFullYear());
     const keys = Object.keys(group);
     const postKeys = _.sortBy(keys).reverse();
@@ -15,7 +15,6 @@ class Projects extends React.Component {
       <section className="section">
         <div className="container content">
           <div className="content" style={{ display: 'flex'}} >
-            <Bio />
             <div className="inner-content" style={{ flexDirection: 'row', marginLeft: '30px' ,maxWidth: '600px' }} >
               <h1 className='rainbow' style={{ fontSize: '36px', marginBottom: '40px', fontWeight: '900' }}>Silly projects I've done </h1>
               <p style={{ fontSize: '18px' }}>
@@ -53,27 +52,19 @@ Projects.propTypes = {
 export default Projects
 
 export const pageQuery = graphql`
-  query CodeByID{
+  query CodeByID($id: String) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "project" } }}
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "YYYY")
-            link
-            description
-          }
-        }
+    markdownRemark(id: { eq : $id }) {
+      id
+      frontmatter {
+        date(formatString: "YYYY")
+        link
+        title
+        description
       }
     }
   }

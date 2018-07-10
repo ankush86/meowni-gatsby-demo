@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Bio from '../pages/bio';
 import Content, { HTMLContent } from '../components/Content'
 
 class Talks extends React.Component {
@@ -17,7 +16,6 @@ class Talks extends React.Component {
       <section className="section">
         <div className="container content">
           <div className="content" style={{ display: 'flex'}} >
-            <Bio />
             <div className="inner-content" style={{ flexDirection: 'row', marginLeft: '30px' ,maxWidth: '600px' }} >
               <h1 className='rainbow' style={{ fontSize: '36px', marginBottom: '40px', fontWeight: '900' }}>Silly projects I've done </h1>
               <p style={{ fontSize: '18px' }}>
