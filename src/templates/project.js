@@ -13,7 +13,7 @@ export const CodeTemplate = ({
   date,
 }) => {
   return (
-    <section className="section">
+    <div className="section">
       {helmet || ''}
       <div className="container content">
         <div className="content" style={{ display: 'flex'}} >
@@ -27,7 +27,7 @@ export const CodeTemplate = ({
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

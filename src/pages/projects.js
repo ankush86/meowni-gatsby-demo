@@ -7,12 +7,13 @@ import _ from 'lodash';
 class Projects extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: posts } = data.markdownRemark
+    const { edges: posts } = data.allMarkdownRemark
     const group = _.groupBy(posts,(e) => new Date(e.node.frontmatter.date).getFullYear());
     const keys = Object.keys(group);
     const postKeys = _.sortBy(keys).reverse();
     return (
-      <section className="section">
+      <div className="section">
+        <div className="top-line"></div>
         <div className="container content">
           <div className="content" style={{ display: 'flex'}} >
             <div className="inner-content" style={{ flexDirection: 'row', marginLeft: '30px' ,maxWidth: '600px' }} >
@@ -26,7 +27,7 @@ class Projects extends React.Component {
                   <h3 className="rainbow" >{key}</h3>
                   {group[key].map(({node: post}) => (
                     <p key={post.id} className="content-listing" >
-                      <a className="has-text-primary" href={post.frontmatter.link}>
+                      <a className="primary-text-custom" href={post.frontmatter.link}>
                         {post.frontmatter.title}:<span> {post.frontmatter.description}</span>
                       </a>
                     </p>
@@ -36,7 +37,7 @@ class Projects extends React.Component {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     )    
   }  
 } 
@@ -52,19 +53,26 @@ Projects.propTypes = {
 export default Projects
 
 export const pageQuery = graphql`
-  query CodeByID($id: String) {
+  query CodeByID {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(id: { eq : $id }) {
-      id
-      frontmatter {
-        date(formatString: "YYYY")
-        link
-        title
-        description
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      filter: { frontmatter: { templateKey: { eq: "project" } }}
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            date(formatString: "YYYY")
+            link
+            title
+            description
+          }
+        }
       }
     }
   }
