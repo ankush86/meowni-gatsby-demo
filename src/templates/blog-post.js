@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Bio from '../pages/bio';
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
@@ -17,11 +16,10 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <div className="section">
       {helmet || ''}
       <div className="container content">
         <div className="columns" style={{ display: 'flex'}} >
-          <Bio />
           <div className="column is-10 is-offset-1" style={{ flexDirection: 'row', marginLeft: '30px' ,maxWidth: '600px' }} >
             <p className="pageDate" >{date}</p>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light rainbow">
@@ -32,7 +30,7 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

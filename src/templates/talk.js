@@ -13,7 +13,7 @@ class Talks extends React.Component {
     const keys = Object.keys(group);
     const postKeys = _.sortBy(keys).reverse();
     return (
-      <section className="section">
+      <div className="section">
         <div className="container content">
           <div className="content" style={{ display: 'flex'}} >
             <div className="inner-content" style={{ flexDirection: 'row', marginLeft: '30px' ,maxWidth: '600px' }} >
@@ -37,9 +37,9 @@ class Talks extends React.Component {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     )    
-  }  
+  }
 } 
 
 Talks.propTypes = {

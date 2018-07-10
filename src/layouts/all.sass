@@ -1,11 +1,6 @@
 @import "~bulma/sass/utilities/initial-variables"
 
 // Config vars
-$kaldi-red: #FD461E
-$kaldi-red-invert: #fff
-
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
 
 .content .taglist
   list-style: none
@@ -40,3 +35,56 @@ $primary-invert: $kaldi-red-invert
   margin-top: 0 !important
 
 @import "~bulma"
+
+.main 
+  box-sizing: border-box
+  padding-top: 50px
+
+.sidebar
+  max-width: 20%
+  text-align: center
+  margin: 0 0 0 50px 
+  float: left
+  box-sizing: border-box
+
+.sidebar div a p 
+  margin-bottom: 10px
+  font-size: 14px
+  font-weight: bold
+
+.sidebar div a p:hover
+  -webkit-animation: zomg 3s infinite
+  -moz-animation: zomg 3s infinite
+  animation: zomg 3s infinite
+
+.sidebar .social-media a:hover
+  animation: avtarZomg 0.9s infinite
+
+.sidebar .social-img:hover
+    animation: avtarZomg 0.9s infinite
+
+.primary-text-custom
+  color : #000000
+
+.primary-text-custom:hover 
+  -webkit-animation: zomg 3s infinite !important
+  -moz-animation: zomg 3s infinite !important
+  animation: zomg 3s infinite !important
+
+span.description
+  color: #777777
+
+.content-listing
+    font-size: 15px
+    font-weight: normal
+
+.content-listing a:hover
+    -webkit-animation: zomg 3s infinite
+    -moz-animation: zomg 3s infinite
+    animation: zomg 3s infinite
+
+.section
+    padding: 0.5rem 0 0 1rem 
+    width: 80%
+    float: left
+

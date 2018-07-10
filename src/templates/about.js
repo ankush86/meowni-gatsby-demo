@@ -6,7 +6,8 @@ class About extends React.Component {
   render() {
     const data = this.props.data.markdownRemark
     return (
-      <section className="section">
+      <div className="section">
+        <div className="top-line"></div>
         <Helmet title={this.props.data.site.siteMetadata.title} />
         <div className="container">
           <div className="content" style={{ display: 'flex'}} >
@@ -15,7 +16,7 @@ class About extends React.Component {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     )
   }
 }

@@ -12,7 +12,8 @@ class Talks extends React.Component {
     const keys = Object.keys(group);
     const postKeys = _.sortBy(keys).reverse();
     return (
-      <section className="section">
+      <div className="section">
+        <div className="top-line"></div>
         <div className="container content">
           <div className="content" style={{ display: 'flex'}} >
             <div className="inner-content" style={{ flexDirection: 'row', marginLeft: '30px' ,maxWidth: '600px' }} >
@@ -24,13 +25,13 @@ class Talks extends React.Component {
                     <p key={post.id} className="content-listing" style={{ display: 'flex' }} >
                       {
                         (post.frontmatter.link !== ' ') ? 
-                          <a className="has-text-primary" href={post.frontmatter.link} dangerouslySetInnerHTML={{ __html: post.html }}></a>
+                          <a className="primary-text-custom" href={post.frontmatter.link} dangerouslySetInnerHTML={{ __html: post.html }}></a>
                         : 
                           <span dangerouslySetInnerHTML={{ __html: post.html }}></span>
                       }
                       {
                         (post.frontmatter.description !== ' ') ?
-                          <span>- {post.frontmatter.description}</span> :
+                          <span className="description">- {post.frontmatter.description}</span> :
                           null
                       }
                       {
@@ -43,7 +44,7 @@ class Talks extends React.Component {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     )    
   }  
 } 

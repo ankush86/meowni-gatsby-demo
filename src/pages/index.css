@@ -11,25 +11,27 @@
   font-weight: 900;
   border-left: 8px solid #ff487a;
   padding-left: 10px;
+  font-size: 20px;
 }
 
 a {
   box-shadow: none;
 }
 
-a.has-text-primary {
+/*a.has-text-primary {
   color: #000000 !important;
 }
 
 a.has-text-primary:hover, a.has-text-primary:focus {
   color: #02b1e6 !important;
-}
+}*/
 
 .dateShow {
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
   float: right;
+  color: #777777;
 }
 
 .top-line {
@@ -46,7 +48,8 @@ a.has-text-primary:hover, a.has-text-primary:focus {
   padding-bottom: 2px;
   border-bottom: 1px dotted #ddd;
   text-decoration: none;
-  font-weight: normal
+  font-weight: normal;
+  min-width: 600px;
 }
 
 @keyframes zomg {
@@ -116,6 +119,11 @@ a:hover {
   color : #ff487a;
   font-weight: bold;
   text-decoration: underline;
+}
+
+.about p {
+  color : #000;
+  font-weight: 500;
 }
 
 .social-media a {

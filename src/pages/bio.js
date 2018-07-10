@@ -12,12 +12,7 @@ import github from '../img/github.svg';
 class Bio extends React.Component {
   render() {
     return (
-      <div
-        style={{
-          maxWidth: '16.6%',
-          textAlign: 'center'
-        }}
-      >
+      <div className="sidebar">
       <a href="/" title="Photo of my face" aria-label="Photo of my face">
         <img
           src={profilePic}
@@ -55,7 +50,7 @@ class Bio extends React.Component {
          <Link to="/about"><p style={{ fontWeight: 'bold', color: "black" }}>about</p></Link>
          <Link to="/"><p style={{ fontWeight: 'bold', color: "black" }}>posts</p></Link>
          <Link to="/projects"><p style={{ fontWeight: 'bold', color: "black" }}>codes</p></Link>
-         <Link to="talks"><p style={{ fontWeight: 'bold', color: "black" }}>talks</p></Link>
+         <Link to="/talks"><p style={{ fontWeight: 'bold', color: "black" }}>talks</p></Link>
          <p id='rainButton' title="emoji-rain" style={{ fontSize: '20px' }}>✨</p>
        </div>
      </div>
