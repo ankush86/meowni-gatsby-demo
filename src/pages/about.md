@@ -5,7 +5,7 @@ date: 2017-01-04T15:04:10.000Z
 ---
 # Hello Friend! I'm Nitin.
 
-One day I tweeted too much about running or plant-based-diet and as Twitter penance I promised I would write a blog post about neural networking or fixing broken healthcare in the USA. I didn't have a blog, so here's one about things I find interesting, which may include, but not be limited to, mountains and dogs.
+One day I tweeted too much about running or plant-based-diet and as Twitter penance I promised I would write a blog post about neural networking or fixing broken healthcare in the USA. I didn't have a blog, so here's one about things I find interesting, which may include, but not be limited to, running on the mountains.
 
 I'm an Enterprise Architect at [Blue Cross NC](https://www.bluecrossnc.com/), where I design, architect and implement various software systems to improve the life of our members, providers and our workforce. I'm responsible to develop technology strategies that accelerate technology transformations inductive to solving business challenges in the area of consumerization, externalization, affordability, and rapid time to market. I love to brainstorm about the Compute, Storage, Networking, Unified Communications and Collaboration, Big Data, Stack Driver and Neural Networking.
 
