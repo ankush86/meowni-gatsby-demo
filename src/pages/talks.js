@@ -1,8 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 import _ from 'lodash';
-//import Bio from '../bio';
 
 class Talks extends React.Component {
   render() {
@@ -25,8 +24,7 @@ class Talks extends React.Component {
                     <p key={post.id} className="content-listing" style={{ display: 'flex' }} >
                       {
                         (post.frontmatter.link !== ' ') ? 
-                          <a className="primary-text-custom" href={post.frontmatter.link} dangerouslySetInnerHTML={{ __html: post.html }}></a>
-                        : 
+                          <a className="primary-text-custom" href={post.frontmatter.link} dangerouslySetInnerHTML={{ __html: post.html }}></a> : 
                           <span dangerouslySetInnerHTML={{ __html: post.html }}></span>
                       }
                       {
@@ -50,22 +48,17 @@ class Talks extends React.Component {
 } 
 
 Talks.propTypes = {
-  link: PropTypes.string.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
-  title: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
+  link: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default Talks
 
 export const pageQuery = graphql`
   query Talks{
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "talk" } }}
@@ -73,16 +66,21 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          html
           frontmatter {
-            templateKey
             date(formatString: "YYYY")
-            title
-            link
             description
+            link
+            templateKey
+            title
             video_link
           }
-          html
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

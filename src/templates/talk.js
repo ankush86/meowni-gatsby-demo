@@ -1,9 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
-import Content, { HTMLContent } from '../components/Content'
+import PropTypes from 'prop-types'
 
 class Talks extends React.Component {
   render() {
@@ -43,22 +40,17 @@ class Talks extends React.Component {
 } 
 
 Talks.propTypes = {
-  link: PropTypes.string.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
-  title: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
+  link: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default Talks
 
 export const pageQuery = graphql`
   query TalksTemplate {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "talk" } }}
@@ -67,13 +59,18 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
-            title
-            templateKey
             date(formatString: "YYYY")
-            link
             description
+            link
+            templateKey
+            title
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

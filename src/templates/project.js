@@ -1,16 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
-import Content, { HTMLContent } from '../components/Content'
+import PropTypes from 'prop-types'
 
 export const CodeTemplate = ({
-  description,
-  link,
-  helmet,
-  title,
   date,
+  description,
+  helmet,
+  link,
+  title,
 }) => {
   return (
     <div className="section">
@@ -32,23 +29,22 @@ export const CodeTemplate = ({
 }
 
 CodeTemplate.propTypes = {
-  link: PropTypes.string.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
-  title: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
+  link: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 const Code = ({ data }) => {
   const { markdownRemark: post } = data
   return (
     <CodeTemplate
-      link={post && post.frontmatter.link}
-      contentComponent={HTMLContent}
+      date={post && post.frontmatter.date}
       description={post && post.frontmatter.description}
       helmet={<Helmet title={`${post && post.frontmatter.title} | Code`} />}
+      link={post && post.frontmatter.link}
       title={post && post.frontmatter.title}
-      date={post && post.frontmatter.date}
     />
   )
 }
@@ -67,9 +63,9 @@ export const pageQuery = graphql`
       id
       frontmatter {
         date(formatString: "YYYY")
+        description
         link
         title
-        description
       }
     }
   }

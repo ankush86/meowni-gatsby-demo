@@ -25,22 +25,22 @@ export default About
 
 export const pageQuery = graphql`
 query AboutByID($id: String!) {
-  site {
-    siteMetadata {
+  markdownRemark(id: { eq: $id }) {
+    id
+    excerpt
+    html
+    fields {
+      slug
+    }
+    frontmatter {
+      date
+      description
       title
     }
   }
-  markdownRemark(id: { eq: $id }) {
-    id
-    html
-    frontmatter {
+  site {
+    siteMetadata {
       title
-      date
-      description
-    }
-    excerpt
-    fields {
-      slug
     }
   }
 }`

@@ -1,8 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 import _ from 'lodash';
-//import Bio from '../bio';
 
 class Projects extends React.Component {
   render() {
@@ -43,22 +42,17 @@ class Projects extends React.Component {
 } 
 
 Projects.propTypes = {
-  link: PropTypes.string.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
-  title: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
+  link: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default Projects
 
 export const pageQuery = graphql`
   query CodeByID {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "project" } }}
@@ -68,11 +62,16 @@ export const pageQuery = graphql`
           id
           frontmatter {
             date(formatString: "YYYY")
+            description
             link
             title
-            description
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

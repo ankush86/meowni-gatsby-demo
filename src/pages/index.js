@@ -1,7 +1,7 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import _ from 'lodash';
-import Link from 'gatsby-link'
 import './index.css';
 
 export default class IndexPage extends React.Component {
@@ -22,7 +22,6 @@ export default class IndexPage extends React.Component {
                   <div className="content" key={key} >
                     <h3 className="rainbow" >{key}</h3>
                     {group[key].map(({node: post}) => (
-                    
                       <p key={post.id} className="content-listing" >
                         <Link className="primary-text-custom" to={post.fields.slug}>
                           {post.frontmatter.title}
@@ -51,11 +50,6 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
@@ -68,11 +62,16 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            title
-            templateKey
             date(formatString: "MMMM DD, YYYY")
+            templateKey
+            title
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }
