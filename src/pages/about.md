@@ -14,3 +14,9 @@ I do a [lot](https://trusting-williams-2a9d92.netlify.com/) of [pretty] [silly] 
 I have a GitHub AMA [repo](https://github.com/nitinkadam33/ama) where you can ask me things, because I heard that's what the cool kids do nowadays. Or you can send me an [email](nitinkadam33@gmail.com). Or both.
 
 Because the internet is a big place, standard disclaimers about these being my views and not my employer's apply.
+
+### If you're a conference and you need a bio:
+
+Nitin works on Neural Networking, Deep Learning web components, and Chrome, and has probably at least once broken the Internet for you. He is unreasonably excited about running, plant-based-diet, traveling and will become your best friend if you have a dog. 
+
+If you need a image, I recommend [this one](TBD)
