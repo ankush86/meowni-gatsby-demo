@@ -3,11 +3,7 @@ templateKey: about
 title: about
 date: 2017-01-04T15:04:10.000Z
 ---
-
 # Hiya! I'm Monica.
-
-
-
 
 One day I tweeted too much about sportsball and as Twitter penance I promised I would write a blog post about C++ protipz. I didn't have a blog, so here's one about things I find interesting, which may include, but not be limited to, squirrels.
 
