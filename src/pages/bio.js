@@ -1,13 +1,11 @@
 import React from 'react'
-
-// Import typefaces
-// import 'typeface-montserrat'
-// import 'typeface-merriweather'
-
 import Link from 'gatsby-link';
+import atom_logo from '../img/atom_logo.png';
+import exposure_logo from '../img/exposure_logo.png';
+import github from '../img/github.svg';
+import medium_logo from '../img/medium_logo.png';
 import profilePic from '../img/profile-pic.jpeg';
 import twitter from '../img/twitter.svg';
-import github from '../img/github.svg';
 
 class Bio extends React.Component {
   render() {
@@ -27,23 +25,35 @@ class Bio extends React.Component {
         />
        </a>
        <div className='social-media' style={{ textAlign: 'center' }}>
-         <a href="https://github.com/notwaldorf" title="Peep at my GitHub">
+         <a href="https://github.com/nitinkadam33" title="Peep at my GitHub">
          <img
             src={github}
             className="social-img"
           />
          </a>
-         <a href="https://github.com/notwaldorf" title="Follow me on twitter">
+         <a href="https://twitter.com/NitinKadam" title="Follow me on twitter">
           <img
             src={twitter}
             className="social-img"
           />
          </a>
-         <a href="https://github.com/notwaldorf" title="Follow me on dribbble">🏀
+         <a href="https://nitinkadam.exposure.co/" title="Follow my photos on exposure.co">
+          <img
+            src={exposure_logo}
+            className="social-img"
+          />
          </a>
-         <a href="https://github.com/notwaldorf" title="Follow my photos on exposure.co">📷
+         <a href="xyz" title="Atom RSS feed">
+          <img
+            src={atom_logo}
+            className="social-img"
+          />
          </a>
-         <a href="https://github.com/notwaldorf" title="Atom RSS feed">📝
+         <a href="https://medium.com/@NitinKadam" title="Find me on medium">
+          <img
+            src={medium_logo}
+            className="social-img"
+          />
          </a>
        </div>
        <div style={{ padding: '10px' }}>
