@@ -43,7 +43,7 @@ class Bio extends React.Component {
             className="social-img"
           />
          </a>
-         <a href="xyz" title="Atom RSS feed">
+         <a href="https://atom.io/" title="Atom RSS feed">
           <img
             src={atom_logo}
             className="social-img"
