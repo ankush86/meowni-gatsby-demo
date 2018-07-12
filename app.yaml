@@ -1,0 +1,19 @@
+runtime: nodejs8
+handlers:
+- url: /
+  static_files: public/index.html
+  upload: public/index.html
+- url: /admin/
+  static_files: public/admin/index.html
+  upload: public/admin/index.html
+- url: /about
+  static_files: public/about/index.html
+  upload: public/about/index.html
+- url: /projects
+  static_files: public/projects/index.html
+  upload: public/projects/index.html
+- url: /talks
+  static_files: public/talks/index.html
+  upload: public/talks/index.html
+- url: /
+  static_dir: public
