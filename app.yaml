@@ -3,15 +3,20 @@ handlers:
 - url: /
   static_files: public/index.html
   upload: public/index.html
+  secure: always
+  redirect_http_response_code: 301
 - url: /admin/
   static_files: public/admin/index.html
   upload: public/admin/index.html
 - url: /about
   static_files: public/about/index.html
   upload: public/about/index.html
-- url: /projects
-  static_files: public/projects/index.html
-  upload: public/projects/index.html
+- url: /posts
+  static_files: public/posts/index.html
+  upload: public/posts/index.html
+- url: /codes
+  static_files: public/codes/index.html
+  upload: public/codes/index.html
 - url: /talks
   static_files: public/talks/index.html
   upload: public/talks/index.html
