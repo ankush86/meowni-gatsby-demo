@@ -4,7 +4,7 @@ import atom_logo from '../img/atom_logo.png';
 import exposure_logo from '../img/exposure_logo.png';
 import github from '../img/github.svg';
 import medium_logo from '../img/medium_logo.png';
-import profilePic from '../img/profile-pic.jpeg';
+import profilePic from '../img/profile-pic.jpg';
 import twitter from '../img/twitter.svg';
 
 class Bio extends React.Component {
@@ -25,31 +25,31 @@ class Bio extends React.Component {
         />
        </a>
        <div className='social-media' style={{ textAlign: 'center' }}>
-         <a href="https://github.com/nitinkadam33" title="Peep at my GitHub">
+         <a href="https://github.com/nitinkadam33" target="_blank" title="Peep at my GitHub">
          <img
             src={github}
             className="social-img"
           />
          </a>
-         <a href="https://twitter.com/NitinKadam" title="Follow me on twitter">
+         <a href="https://twitter.com/NitinKadam" target="_blank" title="Follow me on twitter">
           <img
             src={twitter}
             className="social-img"
           />
          </a>
-         <a href="https://nitinkadam.exposure.co/" title="Follow my photos on exposure.co">
+         <a href="https://nitinkadam.exposure.co/" target="_blank" title="Follow my photos on exposure.co">
           <img
             src={exposure_logo}
             className="social-img"
           />
          </a>
-         <a href="https://atom.io/" title="Atom RSS feed">
+         <a href="https://ide.atom.io/" target="_blank" title="Atom RSS feed">
           <img
             src={atom_logo}
             className="social-img"
           />
          </a>
-         <a href="https://medium.com/@NitinKadam" title="Find me on medium">
+         <a href="https://medium.com/@NitinKadam" target="_blank" title="Find me on medium">
           <img
             src={medium_logo}
             className="social-img"
