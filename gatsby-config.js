@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'About - Nitin Kadam',
+    title: ' - Nitin Kadam',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -10,8 +10,10 @@ class Talks extends React.Component {
     const group = _.groupBy(posts,(e) => new Date(e.node.frontmatter.date).getFullYear());
     const keys = Object.keys(group);
     const postKeys = _.sortBy(keys).reverse();
+    const title = 'Talks' + this.props.data.site.siteMetadata.title
     return (
       <div className="section">
+        <Helmet title={title} />
         <div className="top-line"></div>
         <div className="container content">
           <div className="content" style={{ display: 'flex'}} >
@@ -23,8 +25,8 @@ class Talks extends React.Component {
                   {group[key].map(({node: post}) => (
                     <p key={post.id} className="content-listing" style={{ display: 'flex' }} >
                       {
-                        (post.frontmatter.link !== ' ') ? 
-                          <a className="primary-text-custom" href={post.frontmatter.link} dangerouslySetInnerHTML={{ __html: post.html }}></a> : 
+                        (post.frontmatter.link !== ' ') ?
+                          <a className="primary-text-custom" href={post.frontmatter.link} dangerouslySetInnerHTML={{ __html: post.html }}></a> :
                           <span dangerouslySetInnerHTML={{ __html: post.html }}></span>
                       }
                       {
@@ -43,9 +45,9 @@ class Talks extends React.Component {
           </div>
         </div>
       </div>
-    )    
-  }  
-} 
+    )
+  }
+}
 
 Talks.propTypes = {
   contentComponent: PropTypes.func,

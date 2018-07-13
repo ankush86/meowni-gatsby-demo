@@ -10,8 +10,10 @@ class Projects extends React.Component {
     const group = _.groupBy(posts,(e) => new Date(e.node.frontmatter.date).getFullYear());
     const keys = Object.keys(group);
     const postKeys = _.sortBy(keys).reverse();
+    const title = 'Codes' + this.props.data.site.siteMetadata.title
     return (
       <div className="section">
+        <Helmet  title={title} />
         <div className="top-line"></div>
         <div className="container content">
           <div className="content" style={{ display: 'flex'}} >
@@ -37,9 +39,9 @@ class Projects extends React.Component {
           </div>
         </div>
       </div>
-    )    
-  }  
-} 
+    )
+  }
+}
 
 Projects.propTypes = {
   contentComponent: PropTypes.func,

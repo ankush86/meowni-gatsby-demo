@@ -17,7 +17,7 @@ class Bio extends React.Component {
           className="avtar"
           alt={`Photo of my face`}
           style={{
-            borderRadius: "50%", 
+            borderRadius: "50%",
             width: "150px",
             height: "150px",
             marginBottom: '0px',
@@ -58,8 +58,8 @@ class Bio extends React.Component {
        </div>
        <div style={{ padding: '10px' }}>
          <Link to="/about"><p style={{ fontWeight: 'bold', color: "black" }}>about</p></Link>
-         <Link to="/"><p style={{ fontWeight: 'bold', color: "black" }}>posts</p></Link>
-         <Link to="/projects"><p style={{ fontWeight: 'bold', color: "black" }}>codes</p></Link>
+         <Link to="/posts"><p style={{ fontWeight: 'bold', color: "black" }}>posts</p></Link>
+         <Link to="/codes"><p style={{ fontWeight: 'bold', color: "black" }}>codes</p></Link>
          <Link to="/talks"><p style={{ fontWeight: 'bold', color: "black" }}>talks</p></Link>
          <p id='rainButton' title="emoji-rain" style={{ fontSize: '20px' }}>✨</p>
        </div>
