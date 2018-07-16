@@ -20,5 +20,11 @@ handlers:
 - url: /talks
   static_files: public/talks/index.html
   upload: public/talks/index.html
+- url: /post/(.+)/
+  static_files: public/post/\1/index.html
+  upload: public/post/(.+)/index.html
+- url: /post/(.+)
+  static_files: public/post/\1/index.html
+  upload: public/post/(.+)/index.html
 - url: /
   static_dir: public
