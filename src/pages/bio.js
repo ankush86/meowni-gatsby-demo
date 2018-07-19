@@ -25,19 +25,19 @@ class Bio extends React.Component {
         />
        </a>
        <div className='social-media' style={{ textAlign: 'center' }}>
-         <a href="https://github.com/nitinkadam33" target="_blank" title="Peep at my GitHub">
+         <a href="https://github.com" target="_blank" title="Peep at my GitHub">
          <img
             src={github}
             className="social-img"
           />
          </a>
-         <a href="https://twitter.com/NitinKadam" target="_blank" title="Follow me on twitter">
+         <a href="https://twitter.com" target="_blank" title="Follow me on twitter">
           <img
             src={twitter}
             className="social-img"
           />
          </a>
-         <a href="https://nitinkadam.exposure.co/" target="_blank" title="Follow my photos on exposure.co">
+         <a href="https://exposure.co/" target="_blank" title="Follow my photos on exposure.co">
           <img
             src={exposure_logo}
             className="social-img"
@@ -49,7 +49,7 @@ class Bio extends React.Component {
             className="social-img"
           />
          </a>
-         <a href="https://medium.com/@NitinKadam" target="_blank" title="Find me on medium">
+         <a href="https://medium.com" target="_blank" title="Find me on medium">
           <img
             src={medium_logo}
             className="social-img"

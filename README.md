@@ -1,4 +1,4 @@
-# Nitin Kadam's BlogSite
+# Ankush's BlogSite
 
 # Gatsby + Netlify CMS Starter
 

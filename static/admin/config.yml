@@ -1,6 +1,6 @@
 backend:
  name: github
- repo: nitinkadam33/blogsite
+ repo: ankush86/meowni-gatsby-demo
  
 media_folder: static/img
 public_folder: /img
