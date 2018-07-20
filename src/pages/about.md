@@ -3,7 +3,7 @@ templateKey: about
 title: about
 date: 2017-01-04T15:04:10.000Z
 ---
-# Hello Friend! I'm Nitin.
+# Hello Friend! I'm Ankush.
 
 One day I tweeted too much about running or plant-based-diet and as Twitter penance I promised I would write a blog post about neural networking or fixing broken healthcare in the USA. I didn't have a blog, so here's one about things I find interesting, which may include, but not be limited to, running on the mountains.
 
